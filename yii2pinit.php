@@ -77,7 +77,6 @@ class yii2pinit extends Widget
         yii2pinitAsset::register($view);
 
 $js = <<< SKRIPT
-jQuery(document).ready(function() {
   jQuery('.pinterest-image img').after('<div class="hover-pinterest"></div>');
   jQuery('.hover-pinterest').append('<a class="pin-it-link" target="_blank"></a>');
   jQuery('.pinterest-image').hover(
@@ -102,7 +101,6 @@ jQuery(document).ready(function() {
     },function() {
       jQuery('.hover-pinterest',this).css('display','none');
     });
-});
 SKRIPT;
 
         $view->registerJs(implode("\n", $js),View::POS_READY);
