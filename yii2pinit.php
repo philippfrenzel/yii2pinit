@@ -103,7 +103,7 @@ $js = <<< SKRIPT
     });
 SKRIPT;
 
-        $view->registerJs(implode("\n", $js),View::POS_READY);
+        $view->registerJs($js,View::POS_READY);
     }
 
 }
