@@ -19,7 +19,6 @@ class yii2pinitAsset extends AssetBundle
       'css/yii2pinit.css'
     ];
     public $js = [
-        'js/yii2pinit.js'  
     ];
     public $depends = [
         'yii\web\JqueryAsset'
