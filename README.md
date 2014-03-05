@@ -13,3 +13,22 @@ web/img/pinterest.png
 
 Should be interlaced and not to big;)
 
+Sample CKEDITOR
+===============
+
+```php
+$pinterest = <<< SCRIPT
+{instanceReady: function() {
+  this.dataProcessor.htmlFilter.addRules({
+      elements: {
+          img: function( el ) {
+              if ( !el.attributes.alt )
+                  el.attributes.alt = 'pinterest-image';
+              var fragment = CKEDITOR.htmlParser.fragment.fromHtml( '<div class="pinterest-image">'+el.getOuterHtml()+'</div>' );
+              el.replaceWith(fragment);
+          }
+      }
+  });          
+}}
+SCRIPT;
+```
