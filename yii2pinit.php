@@ -82,7 +82,7 @@ $js = <<< SKRIPT
       var pinhref = 'http://pinterest.com/pin/create/button/?url=';
       pinhref += url;
       pinhref += '&media=';
-      pinhref += encodedurl;
+      pinhref += 'http://' + url + '/' + encodedurl;
       pinhref += '&description=';
       pinhref += desc;
       jQuery('.hover-pinterest a',this).attr('href',pinhref);
