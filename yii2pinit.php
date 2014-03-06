@@ -85,7 +85,7 @@ $js = <<< SKRIPT
       var encodedurl = encodeURIComponent(imgurl);
       var pathname = jQuery(location).attr('href');
       url = encodeURIComponent(pathname);
-      var desc = encodeURIComponent('enter description here');
+      var desc = encodeURIComponent('Simple but Magnificent');
       var pinhref = 'http://pinterest.com/pin/create/button/?url=';
       pinhref += url;
       pinhref += '&media=';
