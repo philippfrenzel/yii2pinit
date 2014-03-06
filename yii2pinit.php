@@ -31,14 +31,7 @@ class yii2pinit extends Widget
     /**
     * @var array all attributes that be accepted by the plugin, check docs!
     */
-    public $clientOptions = array(
-        'get'         => 'tagged',
-        'target'      => '#instafeedtarget',
-        'tagName'     => 'awesome',
-        'userId'      => 'abcded',
-        'accessToken' => '123456_abcedef',
-        'template'    => '<a href="{{link}}"><img src="{{image}}" /></a>'
-    );
+    public $clientOptions = array();
 
     /**
      * Initializes the widget.
@@ -83,7 +76,7 @@ $js = <<< SKRIPT
     function() {
       var imgurl = jQuery('img', this).attr('src');
       var encodedurl = encodeURIComponent(imgurl);
-      var pathname = jQuery(location).attr('href');
+      var pathname = window.location.host; //var pathname = jQuery(location).attr('href');
       url = encodeURIComponent(pathname);
       var desc = encodeURIComponent('Simple but Magnificent');
       var pinhref = 'http://pinterest.com/pin/create/button/?url=';
